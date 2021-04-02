@@ -12,7 +12,7 @@ def adivinar (intentos):
 		print("Número de intento no válido")
 		return
 
-	numero = random.randint(0,5)
+	numero = random.randint(0,100)
 
 	while(i<intentos):
 
