@@ -212,7 +212,7 @@ if sel == 'b':
     (rows,columns) = (img_1.shape[0],img_1.shape[1])
     img_cristiano = cv2.resize(img_cristiano,(columns,rows))
 
-    print("\n\nSeleccione 3 puntos en la imagen y presione a sobre la imagen.")
+    print("\n\nSeleccione 3 puntos en la imagen y presione a sobre la imagen 'a'.")
     print("\nPara salir seleccione q sobre la imagen.")
 
     while(1):
