@@ -50,6 +50,13 @@ cv2.setMouseCallback('img',recorte)
 
 flag = 0 #Para saber cuando se recorta
 
+print("\nDibuje un rectangulo sobre la imagen")
+print("\nSeleccione sobre la imagen:")
+print("\tq: Salir.")
+print("\tg: Recorte (una vez dibujado el rectángulo).")
+print("\tr: Limpiar imagen.")
+print("\te: Transformación euclediana (una vez hecho el recorte).")
+
 while(1):
 
     cv2.imshow('img', img)
