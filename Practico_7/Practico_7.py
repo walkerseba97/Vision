@@ -38,8 +38,8 @@ def trans_afin(img_cristiano):
     
     (rows,columns) = (img_cristiano.shape[0],img_cristiano.shape[1])
 
-    puntos_origen = np.float32([[0,0],[0,rows-1],[columns-1,rows-1]]) #esquina superior izquierda, esquina superior derecha, esquina inferior derecha
-    puntos_destino = np.float32([puntos[0],puntos[1],puntos[2]]) #esquina superior derecha, esquina superior izquierda, esquina inferior derecha
+    puntos_origen = np.float32([[0,0],[0,rows-1],[columns-1,rows-1]])
+    puntos_destino = np.float32([puntos[0],puntos[1],puntos[2]]) 
     
     M = cv2.getAffineTransform(puntos_origen,puntos_destino)
     
