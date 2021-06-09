@@ -30,6 +30,12 @@ def recorte(event, x, y, flags, param):
 cv2.namedWindow('img')
 cv2.setMouseCallback('img',recorte)
 
+print("\nDibuje un rectangulo sobre la imagen")
+print("\nSeleccione sobre la imagen:")
+print("\tq: Salir.")
+print("\tg: Recorte (una vez dibujado el rectángulo).")
+print("\tr: Limpiar imagen.")
+
 while(1):
 
     cv2.imshow('img', img)
