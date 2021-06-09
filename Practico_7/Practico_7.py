@@ -1,4 +1,4 @@
-#Práctico 6: A- Agregar a la función anterior un parámetro que permita aplicar un escalado a la porción rectangular de imagen.
+#Práctico 7: A- Agregar a la función anterior un parámetro que permita aplicar un escalado a la porción rectangular de imagen.
 #                   1- Angle: Ángulo
 #                   2- tx: translación en x
 #                   3- ty: translación en y
