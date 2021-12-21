@@ -278,37 +278,13 @@ if sel == 'c':
         if k == ord ('h'): 
 
             (rows,columns) = (img_2.shape[0],img_2.shape[1])
-
-            puntos_origen = np.float32([[0,0],[0,rows-1],[columns-1,rows-1],[columns-1,0]])
-            puntos_destino = np.float32([puntos_rect[0],puntos_rect[1],puntos_rect[2],puntos_rect[3]]) 
             
-            f_max = puntos_rect[0][0]
-
-            for i in range(4):
-                if(f_max < puntos_rect[i][0]):
-                    f_max = puntos_rect[i][0]
-
-            f_min = puntos_rect[0][0]
-
-            for i in range(4):
-                if(f_min > puntos_rect[i][0]):
-                    f_min = puntos_rect[i][0]
-
-            c_max = puntos_rect[0][0]
-
-            for i in range(4):
-                if(c_max < puntos_rect[i][1]):
-                    c_max = puntos_rect[i][1]
-
-            c_min = puntos_rect[0][0]
-
-            for i in range(4):
-                if(c_min > puntos_rect[i][1]):
-                    c_min = puntos_rect[i][1]
-
-            M = cv2.getPerspectiveTransform(puntos_destino,puntos_origen)
+            puntos_origen = np.float32([[0,0],[0,rows],[columns,rows],[columns,0]])
+            puntos_destino = np.float32([[puntos_rect[0]], [puntos_rect[1]], [puntos_rect[2]], [puntos_rect[3]]])
             
-            img_rect = cv2.warpPerspective(img_2,M,((f_max-f_min),(c_max-c_min)),flags=cv2.INTER_LINEAR)
+            M = cv2.getPerspectiveTransform(puntos_destino, puntos_origen)
+
+            img_rect = cv2.warpPerspective(img, M, (columns, rows))
             
             cv2.imwrite('img_rect.jpg', img_rect)
             cv2.namedWindow('img_rect')

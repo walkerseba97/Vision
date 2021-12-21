@@ -21,7 +21,7 @@ img = cv2.imread(filename)
 def trans_euclidiana(img, rows, columns, tx, ty, angle):
  
     (rows,columns) = (img.shape[0],img.shape[1])
-
+    print(img.shape[0])
     rad_angle = math.radians(angle)
 
     M = np.float32([[np.cos(rad_angle),np.sin(rad_angle),tx],
